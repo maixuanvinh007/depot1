@@ -15,6 +15,7 @@
  *= require_tree .
  *= require_self
  */
+
  body, body > p, body > ol, body > ul, body > td {margin: 8px !important}
 
  #banner {
@@ -58,10 +59,29 @@
      flex: 1;
    }
  
+ //
    #side {
      padding: 1em 2em;
      background: #141;
+     form, div {
+       display: inline;
+     }  
+  
+     input {
+       font-size: small;
+     }
  
+     #cart {
+       font-size: smaller;
+       color:     white;
+       display: inline;
+ 
+       table {
+         border-top:    1px dotted #595;
+         border-bottom: 1px dotted #595;
+         margin-bottom: 10px;
+       }
+     }
      ul {
        padding: 0;
  
@@ -75,6 +95,7 @@
        }
      }
    }
+ //
  }
  
  @media all and (max-width: 800px) {
