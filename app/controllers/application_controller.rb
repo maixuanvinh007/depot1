@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+    before_action :authorize
+
     module CurrentCart
         private
         def set_cart
@@ -8,4 +10,12 @@ class ApplicationController < ActionController::Base
         session[:cart_id] = @cart.id
         end
     end
+
+    protected
+        def authorize
+            unless User.find_by(id: session[:user_id])
+                redirect_to login_url, notice: "Please log in"
+            end
+        end
+
 end
