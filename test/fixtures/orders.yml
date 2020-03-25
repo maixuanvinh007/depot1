@@ -3,12 +3,12 @@
 
 one:
   name: Dave Thomas
-  address: MyText
-  email: maixuanvinh007@gmail.com
+  address: 123 The Street
+  email: dave@example.org
   pay_type: Check
 
 two:
-  name: maixuanvinh
+  name: Sam Ruby
   address: MyText
-  email: maixuanvinh007@gmail.com
+  email: depot@example.com
   pay_type: Check
