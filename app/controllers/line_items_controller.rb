@@ -1,8 +1,8 @@
 
 class LineItemsController < ApplicationController
-  skip_before_action :authorize, only: [:create, :destroy]
+  skip_before_action :authorize, only: [:create, :destroy, :update]
   include CurrentCart
-  before_action :set_cart, only: [:create, :destroy]
+  before_action :set_cart, only: [:create, :destroy, :update]
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
 
   # GET /line_items
@@ -52,8 +52,7 @@ class LineItemsController < ApplicationController
 
       if @line_item.quantity > 1
         if @line_item.update(quantity: @line_item.quantity-1)
-          format.html {  redirect_to store_index_url }
-          
+      
           format.js { @current_item = @line_item }
           format.json { render :show, status: :ok, location: @line_item }
         end
