@@ -14,6 +14,7 @@ git clone https://github.com/maixuanvinh007/depot1.git
 2. Create and setup the database
 
 Run the following commands to create and setup the database.
+
     cd depot1
     yarn install --check-files
     rake db:create
@@ -23,6 +24,7 @@ Run the following commands to create and setup the database.
 3. Start the Rails server
 
 You can start the rails server using the command given below.
+
     bundle install
     rails s
 
