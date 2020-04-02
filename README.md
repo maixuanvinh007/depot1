@@ -1,24 +1,29 @@
-# README
+Prerequisites
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The setups steps expect following tools installed on the system.
 
-Things you may want to cover:
+    Github
+    Ruby 2.7.0
+    Rails 6.0.2.2
 
-* Ruby version
+1. Check out the repository
 
-* System dependencies
+git clone https://github.com/maixuanvinh007/depot1.git
 
-* Configuration
 
-* Database creation
+2. Create and setup the database
 
-* Database initialization
+Run the following commands to create and setup the database.
+    cd depot1
+    yarn install --check-files
+    rake db:create
+    rake db:migrate
+    rails db:seed
 
-* How to run the test suite
+3. Start the Rails server
 
-* Services (job queues, cache servers, search engines, etc.)
+You can start the rails server using the command given below.
+    bundle install
+    rails s
 
-* Deployment instructions
-
-* ...
+And now you can visit the site with the URL http://localhost:3000
